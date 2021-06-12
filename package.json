@@ -1,8 +1,8 @@
 {
-  "name": "bulma-starter",
+  "name": "myDaily",
   "version": "0.0.1",
   "private": true,
-  "description": "A starter template repo for Bulma",
+  "description": "A website that creates a newspaper front page with news and apps.",
   "main": "index.js",
   "scripts": {
     "start": "browser-sync start --server --files '**/*.html, **/*.css, **/**.js'",
@@ -12,7 +12,7 @@
     "bulma",
     "student"
   ],
-  "author": "Manav Misra",
+  "author": "Mehalet, Jason Viox, Alex Bathke, Ashley Fish",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.26.14",
