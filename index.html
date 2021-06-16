@@ -6,22 +6,20 @@
 
     <link rel="stylesheet" href="style.css" />
 
-    <title>Frontend Starter</title>
+    <title>myDaily</title>
   </head>
-  <body>
-    <section class="hero is-medium is-link">
+  <body class="has-background-primary-light">
+    <section class="hero is-medium is-link has-text-centered mb-4">
       <div class="hero-body">
-        <p class="title">Medium hero</p>
-        <p class="subtitle">Medium subtitle</p>
+        <p class="title is-1">Welcome to myDaily</p>
+        <p class="subtitle is-5">
+          Get your headlines, quotes and more — all in one place.
+        </p>
       </div>
     </section>
 
     <!-- Open Container -->
     <div class="container">
-      <div class="notification is-primary">
-        This container is <strong>centered</strong> on desktop and larger
-        viewports.
-      </div>
 
       <!-- Start Tile Layout -->
       <div class="tile is-ancestor">
@@ -30,19 +28,20 @@
             <div class="tile is-parent is-vertical">
               <!-- Top Left Card -->
               <article class="tile is-child notification is-primary">
-                <p class="title">Vertical...</p>
-                <p class="subtitle">Top tile</p>
+                <p class="title" id="weather-title">Weather</p>
+                <p class="subtitle" id="weather-subtitle">Top tile</p>
               </article>
               <!-- Mid Left Card -->
               <article class="tile is-child notification is-warning">
-                <p class="title">...tiles</p>
-                <p class="subtitle">Bottom tile</p>
+                <p class="title" id="animal-title">Animal Facts</p>
+                <p class="subtitle" id="animal-subtitle">Subtile</p>
+                <p class="is-size-6" id="animal-body"></p>
               </article>
             </div>
             <div class="tile is-parent">
               <article class="tile is-child notification is-info">
-                <p class="title">Middle tile</p>
-                <p class="subtitle">With an image</p>
+                <p class="title" id="spacex-title">SpaceX</p>
+                <p class="subtitle" id="spacex-subtitle">With an image</p>
                 <figure class="image is-4by3">
                   <img src="https://bulma.io/images/placeholders/640x480.png" />
                 </figure>
@@ -53,50 +52,42 @@
             <article class="tile is-child notification is-danger">
               <div class="card" id="chuck-norris">
                 <div class="card-content">
-                  <p class="title">
+                  <p class="title" id="chuck-quote">
                     “There are two hard things in computer science: cache
                     invalidation, naming things, and off-by-one errors.”
                   </p>
                   <p class="subtitle">Chuck Norris</p>
                 </div>
-                <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <span>
-                      View on
-                      <a
-                        href="https://twitter.com/codinghorror/status/506010907021828096"
-                        >Twitter</a
-                      >
-                    </span>
-                  </p>
-                  <p class="card-footer-item">
-                    <span> Share on <a href="#">Facebook</a> </span>
-                  </p>
-                </footer>
+
               </div>
             </article>
           </div>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child notification is-success">
-            <div class="content">
-              <p class="title">Tall tile</p>
-              <p class="subtitle">With even more content</p>
-              <div class="content">
-                <!-- Content Here -->
+            <div class="card">
+              <div class="card-content">
+                <p class="title">News Feed</p>
+                <p class="subtitle">With even more content</p>
+                <div class="content">
+                  Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
+                </div>
               </div>
             </div>
+
           </article>
         </div>
       </div>
       <!-- End Tile Layout -->
     </div>
     <!-- Close Container -->
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p><strong>myDaily</strong> by Mehalet, Jason, Alex, and Ashley</p>
+    <section class="hero has-background-primary-light mt-4 has-text-centered" id="footer">
+      <div class="hero-body">
+        <p class="subtitle is-5">
+          <p><strong>myDaily</strong> created by Mehalet, Jason, Alex, and Ashley</p>
+        </p>
       </div>
-    </footer>
+    </section>
 
     <script src="scripts.js" type="module"></script>
   </body>
