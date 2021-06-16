@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="style.css" />
 
@@ -28,8 +29,64 @@
             <div class="tile is-parent is-vertical">
               <!-- Top Left Card -->
               <article class="tile is-child notification is-primary">
-                <p class="title" id="weather-title">Weather</p>
-                <p class="subtitle" id="weather-subtitle">Top tile</p>
+                <p class="title" id="weather-title">Your Weather</p>
+                <p class="subtitle" id="weather-subtitle">Search for a city:</p>
+<!-- Search Field and button -->
+                <div class="field has-addons">
+                  <div class="control mb-3">
+                    <input class="input" id="city-input" type="text" placeholder="Search for a city">
+                  </div>
+                  <div class="control">
+                    <button class="button is-info btn btn-primary" type="button" id="search-button">
+                      Search
+                    </button>
+                  </div>
+                </div>
+<!-- End Search Field -->
+                <form id="history"></form>
+<!-- Start forecast seaction -->
+                <div class="card-content has-background-white	has-text-dark	">
+                      <div class="content has-text-centered">
+                          <span id="city-name" class="city-name is-align-content-center	is-size-3">Houston</span>
+                          <img id="current-pic" src="placeholder" alt="">
+                      </div>
+                      <!-- Forecast Stats -->
+                      <nav class="level">
+                        <div class="level-item has-text-centered ">
+                          <div>
+                            <p class="is-size-7 heading temperature-header">Temperature</p>
+                            <p class="title is-5 temperature">3,456</p>
+                          </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                          <div>
+                            <p class="heading humidity-header">Humidity</p>
+                            <p class="title is-5 humidity">123</p>
+                          </div>
+                        </div>
+                        </nav>
+                        <nav class="level">
+
+                        <div class="level-item has-text-centered">
+                          <div>
+                            <p class="heading wind-speed-header">Wind-Speed</p>
+                            <p class="title is-5 wind-speed">456K</p>
+                          </div>
+                        </div>
+                        <div class="level-item has-text-centered">
+                          <div>
+                            <p class="heading UV-index-header">UV-index</p>
+                            <p class="title is-5 UV-index">789</p>
+                          </div>
+                        </div>
+                      </nav>
+                      <!-- End forecast stats -->
+                </div>
+                <!-- End card container white section -->
+                <div class="card-content has-background-primary-light		has-text-dark	">
+
+                </div>
+
               </article>
               <!-- Mid Left Card -->
               <article class="tile is-child notification is-warning">
