@@ -9,19 +9,95 @@
     <title>Frontend Starter</title>
   </head>
   <body>
-    <div class="columns is-vcentered">
-      <div class="column is-one-quarter">
-        First column
+    <section class="hero is-medium is-link">
+      <div class="hero-body">
+        <p class="title">Medium hero</p>
+        <p class="subtitle">Medium subtitle</p>
       </div>
-      <div class="column is-half">
-        Second column
+    </section>
+
+    <!-- Open Container -->
+    <div class="container">
+      <div class="notification is-primary">
+        This container is <strong>centered</strong> on desktop and larger
+        viewports.
       </div>
-      <div class="column is-one-quarter">
-        Third column
+
+      <!-- Start Tile Layout -->
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-8">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <!-- Top Left Card -->
+              <article class="tile is-child notification is-primary">
+                <p class="title">Vertical...</p>
+                <p class="subtitle">Top tile</p>
+              </article>
+              <!-- Mid Left Card -->
+              <article class="tile is-child notification is-warning">
+                <p class="title">...tiles</p>
+                <p class="subtitle">Bottom tile</p>
+              </article>
+            </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-info">
+                <p class="title">Middle tile</p>
+                <p class="subtitle">With an image</p>
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/640x480.png" />
+                </figure>
+              </article>
+            </div>
+          </div>
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-danger">
+              <div class="card" id="chuck-norris">
+                <div class="card-content">
+                  <p class="title">
+                    “There are two hard things in computer science: cache
+                    invalidation, naming things, and off-by-one errors.”
+                  </p>
+                  <p class="subtitle">Chuck Norris</p>
+                </div>
+                <footer class="card-footer">
+                  <p class="card-footer-item">
+                    <span>
+                      View on
+                      <a
+                        href="https://twitter.com/codinghorror/status/506010907021828096"
+                        >Twitter</a
+                      >
+                    </span>
+                  </p>
+                  <p class="card-footer-item">
+                    <span> Share on <a href="#">Facebook</a> </span>
+                  </p>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-success">
+            <div class="content">
+              <p class="title">Tall tile</p>
+              <p class="subtitle">With even more content</p>
+              <div class="content">
+                <!-- Content Here -->
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
+      <!-- End Tile Layout -->
     </div>
-    <h1>Frontend Starter</h1>
+    <!-- Close Container -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p><strong>myDaily</strong> by Mehalet, Jason, Alex, and Ashley</p>
+      </div>
+    </footer>
+
     <script src="scripts.js" type="module"></script>
   </body>
 </html>
-This is a test
