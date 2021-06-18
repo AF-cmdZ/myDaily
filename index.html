@@ -27,11 +27,12 @@
         <div class="tile is-vertical is-8">
           <div class="tile">
             <div class="tile is-parent is-vertical">
-              <!-- Top Left Card -->
+
+<!-- ---------------------START WEATHER APP --------------------->
               <article class="tile is-child notification is-primary">
                 <p class="title" id="weather-title">Your Weather</p>
                 <p class="subtitle" id="weather-subtitle">Search for a city:</p>
-<!-- Search Field and button -->
+                <!-- Search Field and button -->
                 <div class="field has-addons">
                   <div class="control mb-3">
                     <input class="input" id="city-input" type="text" placeholder="Search for a city">
@@ -42,26 +43,26 @@
                     </button>
                   </div>
                 </div>
-<!-- End Search Field -->
+                <!-- End Search Field -->
                 <form id="history"></form>
-<!-- Start forecast seaction -->
+                <!-- Start forecast seaction -->
                 <div class="card-content has-background-white	has-text-dark	">
                       <div class="content has-text-centered">
-                          <span id="city-name" class="city-name is-align-content-center	is-size-3">Houston</span>
-                          <img id="current-pic" src="placeholder" alt="">
+                          <span id="city-name" class="city-name is-align-content-center	is-size-2 has-text-weight-bold"></span>
+                          <img id="current-pic" src="#" alt="">
                       </div>
                       <!-- Forecast Stats -->
                       <nav class="level">
                         <div class="level-item has-text-centered ">
                           <div>
                             <p class="is-size-7 heading temperature-header">Temperature</p>
-                            <p class="title is-5 temperature">3,456</p>
+                            <p class="title is-5" id="temperature"></p>
                           </div>
                         </div>
                         <div class="level-item has-text-centered">
                           <div>
                             <p class="heading humidity-header">Humidity</p>
-                            <p class="title is-5 humidity">123</p>
+                            <p class="title is-5" id="humidity"></p>
                           </div>
                         </div>
                         </nav>
@@ -70,24 +71,33 @@
                         <div class="level-item has-text-centered">
                           <div>
                             <p class="heading wind-speed-header">Wind-Speed</p>
-                            <p class="title is-5 wind-speed">456K</p>
+                            <p class="title is-5" id="wind-speed"></p>
                           </div>
                         </div>
                         <div class="level-item has-text-centered">
                           <div>
-                            <p class="heading UV-index-header">UV-index</p>
-                            <p class="title is-5 UV-index">789</p>
+                            <p class="heading UV-infdex-header">UV-index</p>
+                            <p class="title is-5" id="UV-index"></p>
                           </div>
                         </div>
                       </nav>
                       <!-- End forecast stats -->
                 </div>
                 <!-- End card container white section -->
+                <!-- Start the 5 day forecast section -->
                 <div class="card-content has-background-primary-light		has-text-dark	">
+                  <h4 class="title is-4">Five-day forecast</h4>
+
+                      <div class="container mb-2 has-text-white is-flex">
+                        <div class="notification is-primary forecast align-self">
+                        </div>
+                      </div>
 
                 </div>
-
+                <!-- End the 5 day forecast section -->
               </article>
+<!-- ---------------------END WEATHER APP --------------------->
+
               <!-- Mid Left Card -->
               <article class="tile is-child notification is-warning">
                 <p class="title" id="animal-title">Animal Facts</p>
@@ -145,7 +155,9 @@
         </p>
       </div>
     </section>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="weather.js"></script>
     <script src="scripts.js" type="module"></script>
   </body>
 </html>
