@@ -3,7 +3,7 @@ const api = {
 };
 
 const baseurl =
-  "https://newsapi.org/v2/everything?q=Apple&from=2021-06-16&sortBy=popularity&apiKey=b91fe63559b74f96bc465e1197eec3d3";
+  "https://newsapi.org/v2/top-headlines?qInTitle=&to=&country=us&sortBy=popularity&pageSize=7&apiKey=b91fe63559b74f96bc465e1197eec3d3";
 
 fetch(baseurl)
   .then((respose) => respose.json())
