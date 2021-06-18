@@ -38,6 +38,7 @@ function getWeather(cityName) {
     })
     .then(function (data) {
       // Return the result on the DOM
+
       $(".city-name").html(data.name + " (" + moment().format("l") + ")");
 
       const weatherPic = data.weather[0].icon;
@@ -55,16 +56,9 @@ function getWeather(cityName) {
 
       const lat = data.coord.lat;
       const lon = data.coord.lon;
-
       // Get UV index function
       function getUV(lon, lat) {
-        const UVurl =
-          "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-          lat +
-          "&lon=" +
-          lon +
-          "&appid=" +
-          APIKey;
+        const UVurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${APIKey}`;
 
         fetch(UVurl)
           .then(function (response) {
@@ -96,7 +90,7 @@ function getWeather(cityName) {
       }
 
       // call UV index function
-      getUV(data.lon, data.lat);
+      getUV(lon, lat);
     });
 
   // Forecast for the next 5 days
