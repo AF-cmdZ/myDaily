@@ -11,18 +11,6 @@ const historyEl = document.getElementById("history");
 const searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 const APIKey = "c2b57ce6c568bc5d04209e2700a7de85";
-//  When search button is clicked, read the city name typed by the user
-
-// Search Function
-// execute getWeather function then add it to the search history
-// function searchCity() {
-//   const cityName = inputEl.val();
-//   getWeather(cityName);
-//   searchHistory.unshift(cityName);
-//   searchHistory = searchHistory.slice(0, 5);
-//   localStorage.setItem("search", JSON.stringify(searchHistory));
-//   generateHistory();
-// }
 
 // Fetch the API
 function getWeather(cityName) {
@@ -68,23 +56,24 @@ function getWeather(cityName) {
             // Return the result on the DOM
 
             const UVIndex = document.createElement("span");
-            UVIndex.setAttribute("class", "tag");
+            UVIndex.setAttribute("class", "tag is-success");
+
             UVIndex.innerHTML = data.current.uvi;
             // uvi.data[0].value
-            // currentUVEl.innerHTML = "";
+            currentUVEl.innerHTML = "";
             currentUVEl.append(UVIndex);
 
             // Attribute the background color depending on the UV index
-            if (data.current.uvi >= 0 && data.current.uvi < 3) {
-              UVIndex.addClass("is-success");
-            } else if (data.current.uvi <= 6) {
-              UVIndex.addClass("is-warning");
-            } else if (data.current.uvi <= 6) {
-              UVIndex.addClass("is-warning-dark");
-            } else if (data.current.uvi <= 8) {
-              UVIndex.addClass("is-danger");
+            if (data.current.uvi > 0 && data.current.uvi < 3) {
+              $(UVIndex).addClass("is-success");
+            } else if (data.current.uvi >= 3) {
+              $(UVIndex).addClass("is-warning");
+            } else if (data.current.uvi >= 6) {
+              $(UVIndex).addClass("is-warning-dark");
+            } else if (data.current.uvi >= 8) {
+              $(UVIndex).addClass("is-danger");
             } else {
-              UVIndex.addClass("is-link");
+              $(UVIndex).addClass("is-link");
             }
           });
       }
@@ -125,12 +114,14 @@ function getWeather(cityName) {
           )
           .attr("alt", data.list[i].weather[0].description);
         icon.addClass("p-0 m-0");
+        icon.addClass("image is-32x32 is-pulled-left");
 
         const temp = $("<p>");
         temp.html("Temp.: " + data.list[i].main.temp + "°F");
+        temp.addClass("is-pulled-right");
 
         const humidity = $("<p>");
-        humidity.addClass("mb-3");
+        humidity.addClass("mb-4");
         humidity.html("Humidity: " + data.list[i].main.humidity + "%");
 
         $(".forecast").append(name, icon, temp, humidity);
