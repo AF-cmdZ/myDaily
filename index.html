@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Frontend Starter</title>
-  </head>
-  <body>
-    <div class="columns is-vcentered">
-      <div class="column is-one-quarter">
-        First column
+  <link rel="stylesheet" href="style.css" />
+
+  <title>myDaily</title>
+</head>
+
+<body class="has-background-primary-light">
+  <section class="hero is-medium is-link has-text-centered mb-4">
+    <div class="hero-body">
+      <p class="title is-1">Welcome to myDaily</p>
+      <p class="subtitle is-5">
+        Get your headlines, quotes and more — all in one place.
+      </p>
+    </div>
+  </section>
+
+  <!-- Open Container -->
+  <div class="container">
+
+    <!-- Start Tile Layout -->
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical is-8">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <!-- Top Left Card -->
+            <article class="tile is-child notification is-primary">
+              <p class="title" id="weather-title">Weather</p>
+              <p class="subtitle" id="weather-subtitle">Top tile</p>
+            </article>
+            <!-- Mid Left Card -->
+            <article class="tile is-child notification is-warning">
+              <p class="title" id="animal-title">Animal Facts</p>
+              <p class="subtitle" id="animal-subtitle">Subtile</p>
+              <p class="is-size-6" id="animal-body"></p>
+            </article>
+          </div>
+
+
+
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-info">
+              <p class="title" id="nasa-img-title">Nasa Images</p>
+              <figure class="image is-4by3">
+                <img src=" " id="nasa-img" />
+              </figure>
+              <p class="subtitle" id="nasa-img-text">With an image</p>
+            </article>
+          </div>
+        </div>
+
+
+
+        <div class="tile is-parent">
+          <article class="tile is-child notification is-danger">
+            <div class="card" id="chuck-norris">
+              <div class="card-content">
+                <p class="title" id="chuck-quote">
+                  “There are two hard things in computer science: cache
+                  invalidation, naming things, and off-by-one errors.”
+                </p>
+                <p class="subtitle">Chuck Norris</p>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="column is-half">
-        Second column
-      </div>
-      <div class="column is-one-quarter">
-        Third column
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-success">
+          <div class="card">
+            <div class="card-content">
+              <p class="title">News Feed</p>
+              <p class="subtitle">With even more content</p>
+              <div class="content">
+                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
+                at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                Cras mattis consectetur purus sit amet fermentum.
+              </div>
+            </div>
+          </div>
+
+        </article>
       </div>
     </div>
-    <h1>Frontend Starter</h1>
-    <script src="scripts.js" type="module"></script>
-  </body>
+    <!-- End Tile Layout -->
+  </div>
+  <!-- Close Container -->
+  <section class="hero has-background-primary-light mt-4 has-text-centered" id="footer">
+    <div class="hero-body">
+      <p class="subtitle is-5">
+      <p><strong>myDaily</strong> created by Mehalet, Jason, Alex, and Ashley</p>
+      </p>
+    </div>
+  </section>
+
+  <script src="nasa.js" type="module"></script>
+</body>
+
 </html>
-This is a test

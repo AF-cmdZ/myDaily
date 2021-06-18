@@ -9,5 +9,7 @@ module.exports = {
   },
   rules: {
     "no-unused-vars": 1,
+    "no-console": 1,
+    "no-undef": 1,
   },
 };
