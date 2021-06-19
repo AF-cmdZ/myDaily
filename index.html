@@ -45,13 +45,13 @@
 
           <div class="tile is-parent">
             <article class="tile is-child notification is-info">
-              <p class="title" id="nasa-img-title">Nasa Images</p>
-              <p class="subtitle is-size-7" id="nasa-img-date"></p>
+              <p class="title" id="nasa-img-title"></p>
+              <p class="subtitle is-size-6" id="nasa-img-date"></p>
               <figure class="image is-4by3">
                 <img src=" " id="nasa-img" />
               </figure>
-              <p class="subtitle" id="nasa-img-copyrightod"></p>
-              <p class="subtitle" id="nasa-img-text"></p>
+              <p class="subtitle is-size-7" id="nasa-img-copyright"></p>
+              <p class="subtitle is-size-6" id="nasa-img-text"></p>
             </article>
           </div>
         </div>
@@ -60,18 +60,19 @@
 
         <div class="tile is-parent">
           <article class="tile is-child notification is-danger">
-            <div class="card" id="chuck-norris">
+            <div class="card" id="dad-jokes">
               <div class="card-content">
-                <p class="title" id="chuck-quote">
-                  “There are two hard things in computer science: cache
-                  invalidation, naming things, and off-by-one errors.”
-                </p>
-                <p class="subtitle">Chuck Norris</p>
+                <p class="title is-size-5" id="jokes-header"></p>
+                <p class="title is-size-4" id="setup"></p>
+                <p class="subtitle  is-italic" id="punchline"></p>
               </div>
             </div>
           </article>
         </div>
       </div>
+
+
+
       <div class="tile is-parent">
         <article class="tile is-child notification is-success">
           <div class="card">
@@ -101,6 +102,7 @@
   </section>
 
   <script src="nasa.js" type="module"></script>
+  <script src="dadjokes.js" type="module"></script>
 </body>
 
 </html>
