@@ -23,5 +23,3 @@ export const getCatFacts = () => {
       return data;
     });
 };
-
-// BONUS: Custom "API"
