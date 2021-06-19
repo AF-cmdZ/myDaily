@@ -3,3 +3,8 @@
 .forecast-date {
   font-size: 18px;
 }
+
+.my-daily {
+  width: 600px;
+  margin: auto;
+}
