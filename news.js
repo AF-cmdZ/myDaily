@@ -16,6 +16,5 @@ const baseurl =
 fetch(baseurl)
   .then((response) => response.json())
   .then((data) => {
-    console.log(data);
-    displayArticleTitles(3, data.articles);
+    displayArticleTitles(5, data.articles);
   });
