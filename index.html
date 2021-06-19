@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 
   <link rel="stylesheet" href="style.css" />
 
@@ -13,9 +14,11 @@
 <body class="has-background-primary-light">
   <section class="hero is-medium is-link has-text-centered mb-4">
     <div class="hero-body">
-      <p class="title is-1">Welcome to myDaily</p>
-      <p class="subtitle is-5">
-        Get your headlines, quotes and more — all in one place.
+      <figure class="image my-daily">
+        <img src="images/MyDaily_Logo.png">
+      </figure>
+      <p class="subtitle is-3">
+        <strong>Get your headlines, quotes and more</strong> — <em>all in one place.</em>
       </p>
     </div>
   </section>
@@ -28,20 +31,85 @@
       <div class="tile is-vertical is-8">
         <div class="tile">
           <div class="tile is-parent is-vertical">
-            <!-- Top Left Card -->
+
+            <!-- ---------------------START WEATHER APP --------------------->
             <article class="tile is-child notification is-primary">
-              <p class="title" id="weather-title">Weather</p>
-              <p class="subtitle" id="weather-subtitle">Top tile</p>
+              <p class="title" id="weather-title">Your Weather</p>
+              <p class="subtitle" id="weather-subtitle">Search for a city:</p>
+              <!-- Search Field and button -->
+              <div class="field has-addons">
+                <div class="control mb-3">
+                  <input class="input" id="city-input" type="text" placeholder="Search for a city">
+                </div>
+                <div class="control">
+                  <button class="button is-info btn btn-primary" type="button" id="search-button">
+                    Search
+                  </button>
+                </div>
+              </div>
+              <!-- End Search Field -->
+              <form id="history"></form>
+              <!-- Start forecast seaction -->
+              <div class="card-content has-background-white	has-text-dark	">
+                <div class="content has-text-centered">
+                  <span id="city-name" class="city-name is-align-content-center	is-size-2 has-text-weight-bold"></span>
+                  <img id="current-pic" src="#" alt="">
+                </div>
+                <!-- Forecast Stats -->
+                <nav class="level">
+                  <div class="level-item has-text-centered ">
+                    <div>
+                      <p class="is-size-7 heading temperature-header">Temperature</p>
+                      <p class="title is-5" id="temperature"></p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading humidity-header">Humidity</p>
+                      <p class="title is-5" id="humidity"></p>
+                    </div>
+                  </div>
+                </nav>
+                <nav class="level">
+
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading wind-speed-header">Wind-Speed</p>
+                      <p class="title is-5" id="wind-speed"></p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading UV-infdex-header">UV-index</p>
+                      <p class="title is-5" id="UV-index"></p>
+                    </div>
+                  </div>
+                </nav>
+                <!-- End forecast stats -->
+              </div>
+              <!-- End card container white section -->
+              <!-- Start the 5 day forecast section -->
+              <div class="card-content has-background-primary-light		has-text-dark	">
+                <h4 class="title is-4">Five-day forecast</h4>
+
+                <div class="container mb-2 has-text-white">
+                  <div class="notification is-primary forecast">
+                  </div>
+                </div>
+
+              </div>
+              <!-- End the 5 day forecast section -->
             </article>
+            <!-- ---------------------END WEATHER APP --------------------->
+
             <!-- Mid Left Card -->
             <article class="tile is-child notification is-warning">
-              <p class="title" id="animal-title">Animal Facts</p>
-              <p class="subtitle" id="animal-subtitle">Subtile</p>
+              <p class="title" id="animal-title">Daily Cat Fact</p>
+              <p class="subtitle" id="animal-subtitle">These fun facts about cats will make you feel all fuzzy inside.
+              </p>
               <p class="is-size-6" id="animal-body"></p>
             </article>
           </div>
-
-
 
           <div class="tile is-parent">
             <article class="tile is-child notification is-info">
@@ -55,8 +123,6 @@
             </article>
           </div>
         </div>
-
-
 
         <div class="tile is-parent">
           <article class="tile is-child notification is-danger">
@@ -78,11 +144,15 @@
           <div class="card">
             <div class="card-content">
               <p class="title">News Feed</p>
-              <p class="subtitle">With even more content</p>
+              <p class="subtitle">Top Headlines From The US</p>
               <div class="content">
-                Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida
-                at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                Cras mattis consectetur purus sit amet fermentum.
+                <ul>
+                  <li><a id="headline-0"> </a> </li>
+                  <li><a id="headline-1"> </a> </li>
+                  <li><a id="headline-2"> </a></li>
+                  <li><a id="headline-3"> </a></li>
+                  <li><a id="headline-4"> </a></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -100,6 +170,12 @@
       </p>
     </div>
   </section>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="nasa.js"></script>
+  <script src="weather.js"></script>
+  <script src="scripts.js" type="module"></script>
+  <script src="news.js" type="module"></script>
 
   <script src="nasa.js" type="module"></script>
   <script src="dadjokes.js" type="module"></script>
