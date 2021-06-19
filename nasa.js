@@ -13,8 +13,10 @@ function sendApiRequest(event) {
 
 function getData(response) {
   console.log(response);
-  document.querySelector("#");
+  document.querySelector("#nasa-img-title").innerHTML = response.title;
+  document.querySelector("#nasa-img-date").innerHTML = response.date;
   document.querySelector("#nasa-img").src = `${response.url}`;
+  document.querySelector("#nasa-img-copyright").innerHTML = response.copyright;
   document.querySelector("#nasa-img-text").innerHTML = response.explanation;
 }
 
