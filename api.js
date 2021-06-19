@@ -1,11 +1,11 @@
-// Example from class
-// const BASE_URL = "https://jsonplaceholder.typicode.com/todos";
+const catFacts = "https://catfact.ninja/fact";
 
-// export default {
-//   getTodos() {
-//     const todos = fetch(BASE_URL)
-//       .then((res) => res.json())
-//       .then((todos) => todos);
-//   },
-// };
-// End Example from class
+export const getCatFacts = () => {
+  return fetch(catFacts)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      return data;
+    });
+};
