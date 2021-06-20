@@ -12,6 +12,7 @@ function sendApiRequest() {
 }
 
 function getData(response) {
+  document.querySelector("#nasa-section-header").innerHTML = `From the Cosmos`;
   document.querySelector("#nasa-img-title").innerHTML = response[0].title;
   document.querySelector("#nasa-img-date").innerHTML = response[0].date;
   document.querySelector("#nasa-img").src = `${response[0].url}`;
