@@ -1,5 +1,5 @@
 const api = {
-  key: "b91fe63559b74f96bc465e1197eec3d3git",
+  key: "2d4d1980d90bcd33eafeebc7a489e0ce",
 };
 
 function displayArticleTitles(numArticles, articlesArray) {
@@ -11,7 +11,7 @@ function displayArticleTitles(numArticles, articlesArray) {
 }
 
 const baseurl =
-  "https://newsapi.org/v2/top-headlines?qInTitle=&to=&country=us&sortBy=popularity&pageSize=20&apiKey=b91fe63559b74f96bc465e1197eec3d3";
+  "https://gnews.io/api/v4/top-headlines?&country=us&token=2d4d1980d90bcd33eafeebc7a489e0ce";
 
 fetch(baseurl)
   .then((response) => response.json())
