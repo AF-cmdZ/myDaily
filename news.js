@@ -11,10 +11,10 @@ function displayArticleTitles(numArticles, articlesArray) {
 }
 
 const baseurl =
-  "https://newsapi.org/v2/top-headlines?qInTitle=&to=&country=us&sortBy=popularity&pageSize=7&apiKey=b91fe63559b74f96bc465e1197eec3d3";
+  "https://newsapi.org/v2/top-headlines?qInTitle=&to=&country=us&sortBy=popularity&pageSize=20&apiKey=b91fe63559b74f96bc465e1197eec3d3";
 
 fetch(baseurl)
   .then((response) => response.json())
   .then((data) => {
-    displayArticleTitles(5, data.articles);
+    displayArticleTitles(10, data.articles);
   });
